@@ -8,8 +8,7 @@ class Stretchy
   end
 
   def search(query)
-    response = post_json("#{@es_url}/_search", query)
-    puts response
+    post_json("#{@es_url}/_search", query)
   end
 
   def post_json(url, json)
