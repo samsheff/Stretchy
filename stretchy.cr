@@ -11,8 +11,16 @@ class Stretchy
     post_json("#{@es_url}/_search", query)
   end
 
+  def match_all(size = "10")
+    query = "{\"query\":{\"bool\":{\"must\":{\"match_all\":{}}}},\"size\":#{size.to_s}}"
+
+    search(query)
+  end
+
   def post_json(url, json)
     Json.parse(@http_client.post(url, json).body.not_nil!)
   end
 
 end
+
+puts Stretchy.new.match_all
