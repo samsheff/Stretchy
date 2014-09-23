@@ -1,0 +1,9 @@
+# Vim Artifacts
+*.swo
+*.swp
+
+# Crystal Artifacts
+.crystal/
+
+# Finder Artifacts
+.DS_Store
