@@ -22,5 +22,3 @@ class Stretchy
   end
 
 end
-
-puts Stretchy.new.match_all
